@@ -22,7 +22,7 @@ $userForm=array(
         'filters'=>array('striptags','striptrim'),
         'validation'=>array('required'=>TRUE,
                             'email'=>TRUE,
-                            'maxsize'=>20,
+                            'maxsize'=>200,
                             'minsize'=>3
                             )
     ),
@@ -45,13 +45,13 @@ $userForm=array(
         'type'=>'file',
         'validation'=>array('size'=>100000)
     ),
-    'gender'=>array(
+    'genders_idgender'=>array(
         'label'=>'Sexo',
         'type'=>'radio',
         'options'=>array('M'=>'m','H'=>'h','O'=>'o'),
         'validation'=>array('required'=>TRUE)
     ),
-    'city'=>array(
+    'cities_idcity'=>array(
         'label'=>'Ciudad',
         'type'=>'select',
         'options'=>array('Valencia'=>'VLC',

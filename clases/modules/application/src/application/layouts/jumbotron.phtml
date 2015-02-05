@@ -8,13 +8,14 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Narrow Jumbotron Template for Bootstrap</title>
+    <title><?=strtoupper($request['controller'].'-'.
+						 $request['action']);?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/assets/vendor/bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="/assets/css/jumbotron-narrow.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->

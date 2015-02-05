@@ -4,7 +4,7 @@ Formulario de registro
 <ul>
     <li>
         <label>Id</label>
-        <input type="hidden" name="id" />
+        <input type="hidden" name="iduser" />
     </li>
     <li>
         <label>Nombre</label>
@@ -29,16 +29,16 @@ Formulario de registro
     </li>
     <li>
         <label>Sexo</label>
-        M<input type="radio" name="gender" value="m"/>
-        H<input type="radio" name="gender" value="h"/>
-        O<input type="radio" name="gender" value="o"/>
+        M<input type="radio" name="genders_idgender" value="1"/>
+        H<input type="radio" name="genders_idgender" value="2"/>
+        O<input type="radio" name="genders_idgender" value="3"/>
     </li>
     <li>
         <label>Ciudad</label>
-        <select name="city">
-            <option>Valencia</option>
-            <option>Barcelona</option>
-            <option>Madrid</option>
+        <select name="cities_idcity">
+            <option value="1">Valencia</option>
+            <option value="2">Barcelona</option>
+            <option value="3">Madrid</option>
         </select>
     </li>
     <li>

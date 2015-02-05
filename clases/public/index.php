@@ -1,40 +1,29 @@
 <?php
 
-/*$name = "agustin".date('Y H i \n j');
-
-echo hash('sha256', $name);
-
-die;*/
+require_once ('../autoload.php');
 
 
-require_once ('../modules/core/src/core/models/parseUrl.php');
-
-$request = parseURL();
-//$request = routeUrl($request);
-
-switch($request['controller'])
-{
-    case 'users':
-        include_once('../modules/application/src/application/controllers/users.php');
-    break;
-    case 'error':
-    break;    
-    case 'index':
-        include_once('../modules/application/src/application/controllers/index.php');
-    break;
-}
+// if(getenv('APPLICATION_ENV')!='development')
+//     $config = 'configs/application.php';
+// else
+//     $config = 'configs/application.development.php';
 
 
 
+// $fc = core\models\FrontController::getInstance($config);
+// $fc->dispatch();
 
 
+$config = array('db' => array('host'=>'localhost',
+                    'user'=>'root',
+                    'password'=>'1234',
+                    'database'=>'crud'
+                )    
+);
 
+$request = array('controller'=>'application\controllers\User',
+                      'action'=>'select'
+                      );
 
-
-
-
-
-
-
-
-
+$index = new application\controllers\Users($request,$config);
+echo $index -> select();

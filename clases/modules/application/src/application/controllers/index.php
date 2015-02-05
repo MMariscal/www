@@ -1,37 +1,18 @@
 <?php
+namespace application\controllers;
 
-switch($request['action'])
+class Index
 {
-    case 'index':
-        ob_start();        
-            include('../modules/application/src/application/views/index/index.phtml');
-            $content = ob_get_contents();
-        ob_end_clean();
-    break;   
+    public $layout = 'jumbotron';
+    private $request;
+    
+//     public function __construct($dispatch)
+//     {
+//         $this->request = $dispatch->request;
+//     }
+    
+    public function index()
+    {
+        return \core\models\Mvc::getView(__METHOD__);
+    }    
 }
-
-
-include('../modules/application/src/application/layouts/jumbotron.phtml');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
